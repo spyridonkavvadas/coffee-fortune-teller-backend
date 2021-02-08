@@ -1,7 +1,8 @@
 const express = require("express");
 const {
   getOracles,
-  getOracle,
+
+  getSingleOracle
  
 } = require('../controllers/oracles');
 
@@ -13,9 +14,8 @@ api
  
 
 api
-  .route('/:id')
-  .get(getOracle)
-  
+	.route('/random')
+  	.get(getSingleOracle)
 
 // locahost:5000/users/:id/orders
 // api
