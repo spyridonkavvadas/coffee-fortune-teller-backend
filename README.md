@@ -1,2 +1,0 @@
-# coffee-fortune-teller-backend
-
