@@ -33,12 +33,16 @@ const getSingleOracle = async (req, res, next) => {
 
     const successOracle = await Oracle.aggregate([{ $match: { category: 'success' } }]).sample(1);
 
-
-    const result = healthOracle[0].predictions + ' ' + travelsOracle[0].predictions + ' ' + businessOracle[0].predictions + ' ' + financialOracle[0].predictions + ' ' + loveOracle[0].predictions + ' ' + familyOracle[0].predictions + ' ' + relationshipsOracle[0].predictions + ' ' + successOracle[0].predictions;
-
-
-    console.log(healthOracle[0].predictions);
-    console.log(result);
+    const result = [
+      healthOracle[0].predictions,
+      travelsOracle[0].predictions,
+      businessOracle[0].predictions,
+      financialOracle[0].predictions,
+      loveOracle[0].predictions,
+      familyOracle[0].predictions,
+      relationshipsOracle[0].predictions,
+      successOracle[0].predictions
+    ]
       
     res.json({ success: true, data: result })
   } catch(err) {
