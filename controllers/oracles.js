@@ -39,9 +39,9 @@ const getSingleOracle = async (req, res, next) => {
       businessOracle[0].predictions,
       financialOracle[0].predictions,
       loveOracle[0].predictions,
-      familyOracle[0].predictions,
-      relationshipsOracle[0].predictions,
-      successOracle[0].predictions
+      familyOracle[0].predictions
+      //relationshipsOracle[0].predictions,
+      //successOracle[0].predictions
     ]
       
     res.json({ success: true, data: result })
