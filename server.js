@@ -1,5 +1,6 @@
-require('dotenv').config()
+require('dotenv').config();
 require('colors');
+
 const express = require("express");
 const cors = require('cors');
 const connectDB = require('./dbinit');
